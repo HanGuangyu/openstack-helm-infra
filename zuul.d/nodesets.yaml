@@ -58,6 +58,24 @@
           - node-2
 
 - nodeset:
+    name: openstack-helm-openeuler
+    nodes:
+      - name: primary
+        label: openEuler-22-03-LTS
+      - name: node-1
+        label: openEuler-22-03-LTS
+      - name: node-2
+        label: openEuler-22-03-LTS
+    groups:
+      - name: primary
+        nodes:
+          - primary
+      - name: nodes
+        nodes:
+          - node-1
+          - node-2
+
+- nodeset:
     name: openstack-helm-five-node-ubuntu
     nodes:
       - name: primary
@@ -94,6 +112,30 @@
         label: centos-7
       - name: node-4
         label: centos-7
+    groups:
+      - name: primary
+        nodes:
+          - primary
+      - name: nodes
+        nodes:
+          - node-1
+          - node-2
+          - node-3
+          - node-4
+
+- nodeset:
+    name: openstack-helm-five-node-openeuler
+    nodes:
+      - name: primary
+        label: openEuler-22-03-LTS
+      - name: node-1
+        label:openEuler-22-03-LTS
+      - name: node-2
+        label: openEuler-22-03-LTS
+      - name: node-3
+        label: openEuler-22-03-LTS
+      - name: node-4
+        label: openEuler-22-03-LTS
     groups:
       - name: primary
         nodes:
